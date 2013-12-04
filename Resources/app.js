@@ -13,3 +13,5 @@ var db = Ti.Database.open('todo.sqlite');
 // if database structure is not present create db table 
 db.execute('CREATE TABLE IF NOT EXISTS TODO_ITEMS (ID INTEGER PRIMARY KEY AUTOINCREMENT, NAME TEXT, IS_COMPLETE INTEGER)');
 
+// construct main window
+var win = Ti.UI.createWindow();
