@@ -36,3 +36,6 @@ var txtTaskName = Ti.UI.createTextField({
 	backgroundColor: '#ffffff',
 	borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED
 });
+
+// construct button
+var btnAdd = Ti.UI.createButton();
