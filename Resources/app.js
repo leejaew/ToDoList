@@ -7,6 +7,11 @@
  * 
  */
 
+// open the database and create schema
+var db = Ti.Database.open('todo.sqlite');
+
+
+
 // this sets the background color of the master UIView (when there are no windows/tab groups on it)
 Titanium.UI.setBackgroundColor('#000');
 
