@@ -53,8 +53,14 @@ headerView.add(btnAdd);
 win.add(headerView);
 
 // construct task view
-var taskView = Ti.UI.createView();
+var taskView = Ti.UI.createView({
+	top: '80dp',
+	width: '100%',
+	backgroundColor: '#ffffff'
+});
 
+// add task view to main window
+win.add(taskView);
 
 
 
