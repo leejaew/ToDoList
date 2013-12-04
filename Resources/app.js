@@ -38,4 +38,10 @@ var txtTaskName = Ti.UI.createTextField({
 });
 
 // construct button
-var btnAdd = Ti.UI.createButton();
+var btnAdd = Ti.UI.createButton({
+	backgroundImage: 'images/746-plus-circle.png',
+	left: 15,
+	height: '45dp',
+	width: '45dp'
+});
+
