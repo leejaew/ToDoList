@@ -1,3 +1,12 @@
+/*
+ * Define local DB structure (SQLite)
+ * 
+ * ID : INTEGER => auto increment every time new record is inserted into the DB
+ * NAME : TEXT => todo text 
+ * IS_COMPLETE : INTEGER => SQLite does not support boolean values
+ * 
+ */
+
 // this sets the background color of the master UIView (when there are no windows/tab groups on it)
 Titanium.UI.setBackgroundColor('#000');
 
