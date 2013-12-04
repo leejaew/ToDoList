@@ -14,4 +14,8 @@ var db = Ti.Database.open('todo.sqlite');
 db.execute('CREATE TABLE IF NOT EXISTS TODO_ITEMS (ID INTEGER PRIMARY KEY AUTOINCREMENT, NAME TEXT, IS_COMPLETE INTEGER)');
 
 // construct main window
-var win = Ti.UI.createWindow();
+var win = Ti.UI.createWindow({
+	backgroundColor: '#ffffff',
+	title: 'To-do List'
+});
+
