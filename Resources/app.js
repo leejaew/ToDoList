@@ -52,6 +52,10 @@ headerView.add(btnAdd);
 // add header to main window
 win.add(headerView);
 
+// construct task view
+var taskView = Ti.UI.createView();
+
+
 
 
 // open main window
