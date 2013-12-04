@@ -106,11 +106,23 @@ if (!Ti.Android) {
 buttonBar.add(basicSwitch);
 
 // construct button to clear completed tasks
-var btnClearComplete = Ti.UI.createButton();
+var btnClearComplete = Ti.UI.createButton({
+	title: 'Clear',
+	right: 5,
+	color: '##e9e9e9'
+});
 
+//add clear button to buttonbar view
+buttonBar.add(btnClearComplete);
 
 // add button bar to the main window
 win.add(buttonBar);
 
 // open main window
 win.open();
+
+
+// add records to local database
+function addTask(name) {
+	db.execute('INSERT INTO TODO_ITEMS (NAME, IS_COMPLETE) VALUES (?, 0)', name);
+}
