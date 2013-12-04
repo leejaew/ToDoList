@@ -125,6 +125,15 @@ win.open();
 // add records to local database
 function addTask(name) {
 	db.execute('INSERT INTO TODO_ITEMS (NAME, IS_COMPLETE) VALUES (?, 0)', name);
+	
+	// clear textfield after db executes
+	txtTaskName.value = '';
+	
+	// lose focus on textfield
+	txtTaskName.blur();
+	
+	// refresh table by listing all records from local database after db execute
+	refreshTaskList();
 }
 
 // list all records from local database 
