@@ -51,6 +51,11 @@ btnAdd.addEventListener('click', function(e) {
 	addTask(txtTaskName.value);
 });
 
+// listen for 'return' event from textfield
+txtTaskName.addEventListener('return', function() {
+	btnAdd.fireEvent('click');
+});
+
 // add textfield and button to header
 headerView.add(txtTaskName);
 headerView.add(btnAdd);
