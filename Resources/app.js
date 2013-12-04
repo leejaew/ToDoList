@@ -51,3 +51,8 @@ headerView.add(btnAdd);
 
 // add header to main window
 win.add(headerView);
+
+
+
+// open main window
+win.open();
