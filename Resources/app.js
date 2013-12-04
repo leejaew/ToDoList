@@ -31,7 +31,7 @@ var headerView = Ti.UI.createView({
 // construct textfield
 var txtTaskName = Ti.UI.createTextField({
 	left: 15,
-	width: '75%',
+	width: '80%',
 	hintText: 'Enter a new task',
 	backgroundColor: '#ffffff',
 	borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED
@@ -40,7 +40,7 @@ var txtTaskName = Ti.UI.createTextField({
 // construct button
 var btnAdd = Ti.UI.createButton({
 	backgroundImage: 'images/746-plus-circle.png',
-	left: 15,
+	left: 10,
 	height: '25dp',
 	width: '25dp'
 });
@@ -81,24 +81,26 @@ var buttonBar = Ti.UI.createView({
 	bottom: 0
 });
 
-/*
-// construct tabbed bar element for iOS
-var	basicSwitch = Ti.UI.iOS.createTabbedBar({
-	labels: ['Open', 'Completed'],
-	left: 5,
-	backgroundColor: '#e9e9e9',
-	style: Titanium.UI.iPhone.SystemButtonStyle.BAR,
-	index: 0,
-});
-*/
+var basicSwitch;
 
-// construct switch button for Android
-var basicSwitch = Ti.UI.createSwitch({
-	value: true,
-	left: 5,
-	titleOn: 'Open',
-	titleOff: 'Completed'
-});
+if (!Ti.Android) {
+	// construct tabbed bar element for iOS
+	basicSwitch = Ti.UI.iOS.createTabbedBar({
+		labels: ['Open', 'Completed'],
+		left: 5,
+		backgroundColor: '#e9e9e9',
+		style: Titanium.UI.iPhone.SystemButtonStyle.BAR,
+		index: 0,
+	});
+} else {	
+	// construct switch button for Android
+	basicSwitch = Ti.UI.createSwitch({
+		value: true,
+		left: 5,
+		titleOn: 'Open',
+		titleOff: 'Completed'
+	});
+}
 
 // add switch button object to buttonbar view
 buttonBar.add(basicSwitch);
