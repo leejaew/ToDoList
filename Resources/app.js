@@ -83,7 +83,8 @@ taskList.addEventListener('click', function(e) {
 	var todoItem = e.rowData;
 	var isComplete = (todoItem.hasCheck ? 0 : 1);
 
-	db.execute('UPDATE TODO_ITEMS SET IS_COMPLETE = ? WHERE ID = ?', isComplete, todoItem.id);
+	db.execute('UPDATE TODO_ITEMS SET IS_COMPLETE = ? WHERE ID = ?',
+				isComplete, todoItem.id);
 	refreshTaskList();
 });
 
@@ -196,17 +197,23 @@ function refreshTaskList() {
 
 // toggle between showing all the data or listing only the rows that are switched to 'completed'
 function toggleAllTasks(showAll) {
+	//alert(showAll);
+	
 	if (showAll) {
 		refreshTaskList();
 	} else {
 		var section = taskList.data[0];
-
-		for (var i = 0; i < section.rowCount; i++) {
-			var row = section.rows[i];
-
-			if (row.hasCheck) {
-				taskList.deleteRow(i);
+		
+		if(section) {
+			for (var i = 0; i < section.rowCount; i++) {
+				var row = section.rows[i];
+	
+				if (row.hasCheck) {
+					taskList.deleteRow(i);
+				}
 			}
+		}else{
+			refreshTaskList();
 		}
 	}
 }
