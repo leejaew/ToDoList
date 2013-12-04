@@ -139,6 +139,11 @@ var btnClearComplete = Ti.UI.createButton({
 	right: 5,
 	color: '##e9e9e9'
 });
+  
+btnClearComplete.addEventListener('click', function(e) {
+	db.execute('DELETE FROM TODO_ITEMS WHERE IS_COMPLETE = 1;');
+	refreshTaskList();
+});
 
 //add clear button to buttonbar view
 buttonBar.add(btnClearComplete);
