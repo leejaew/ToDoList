@@ -177,3 +177,20 @@ function refreshTaskList() {
 
 	taskList.setData(data);
 }
+
+// toggle between showing all the data or listing only the rows that are switched to 'completed'
+function toggleAllTasks(showAll) {
+	if (showAll) {
+		refreshTaskList();
+	} else {
+		var section = taskList.data[0];
+
+		for (var i = 0; i < section.rowCount; i++) {
+			var row = section.rows[i];
+
+			if (row.hasCheck) {
+				taskList.deleteRow(i);
+			}
+		}
+	}
+}
