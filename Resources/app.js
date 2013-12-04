@@ -25,7 +25,7 @@ var headerView = Ti.UI.createView({
 	width: '100%',
 	backgroundColor: '#efefef',
 	layout: 'horizontal',
-	top: 0
+	top: '40dp'
 });
 
 // construct textfield
