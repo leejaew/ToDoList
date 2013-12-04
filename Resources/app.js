@@ -60,9 +60,15 @@ var taskView = Ti.UI.createView({
 });
 
 // construct table view - list of tasks
-var taskList = Ti.UI.createTableView();
+var taskList = Ti.UI.createTableView({
+	width: Ti.UI.FILL,
+	height: Ti.UI.FILL,
+	backgroundColor: '#f8e4cc',
+	separatorColor: '#447294'
+});
 
-
+// add table view to task view (adding tableview to the main taskview)
+taskView.add(taskList);
 
 // add task view to main window
 win.add(taskView);
