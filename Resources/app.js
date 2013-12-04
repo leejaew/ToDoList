@@ -81,6 +81,16 @@ var buttonBar = Ti.UI.createView({
 	bottom: 0
 });
 
+// construct tabbed bar element for iOS
+var	basicSwitch = Ti.UI.iOS.createTabbedBar({
+	labels: ['Open', 'Completed'],
+	left: 5,
+	backgroundColor: '#e9e9e9',
+	style: Titanium.UI.iPhone.SystemButtonStyle.BAR,
+	index: 0,
+});
+buttonBar.add(basicSwitch);
+
 // add button bar to the main window
 win.add(buttonBar);
 
