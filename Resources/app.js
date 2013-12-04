@@ -106,7 +106,7 @@ var basicSwitch;
 if (!Ti.Android) {
 	// construct tabbed bar element for iOS
 	basicSwitch = Ti.UI.iOS.createTabbedBar({
-		labels: ['Open', 'Completed'],
+		labels: ['All', 'Active'],
 		left: 5,
 		backgroundColor: '#e9e9e9',
 		style: Titanium.UI.iPhone.SystemButtonStyle.BAR,
@@ -121,8 +121,8 @@ if (!Ti.Android) {
 	basicSwitch = Ti.UI.createSwitch({
 		value: true,
 		left: 5,
-		titleOn: 'Open',
-		titleOff: 'Completed'
+		titleOn: 'All',
+		titleOff: 'Active'
 	});
 	
 	basicSwitch.addEventListener('change', function(e) {
@@ -150,6 +150,9 @@ buttonBar.add(btnClearComplete);
 
 // add button bar to the main window
 win.add(buttonBar);
+
+// refresh database initially on load
+refreshTaskList();
 
 // open main window
 win.open();
