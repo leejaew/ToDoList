@@ -49,3 +49,5 @@ var btnAdd = Ti.UI.createButton({
 headerView.add(txtTaskName);
 headerView.add(btnAdd);
 
+// add header to main window
+win.add(headerView);
