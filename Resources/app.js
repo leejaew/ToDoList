@@ -105,6 +105,10 @@ if (!Ti.Android) {
 // add switch button object to buttonbar view
 buttonBar.add(basicSwitch);
 
+// construct button to clear completed tasks
+var btnClearComplete = Ti.UI.createButton();
+
+
 // add button bar to the main window
 win.add(buttonBar);
 
