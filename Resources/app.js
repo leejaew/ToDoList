@@ -45,6 +45,12 @@ var btnAdd = Ti.UI.createButton({
 	width: '25dp'
 });
 
+// listen for 'click' event from btnAdd object
+btnAdd.addEventListener('click', function(e) {
+	// call addTask method using textfield's value as arg 
+	addTask(txtTaskName.value);
+});
+
 // add textfield and button to header
 headerView.add(txtTaskName);
 headerView.add(btnAdd);
