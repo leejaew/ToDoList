@@ -20,4 +20,13 @@ var win = Ti.UI.createWindow({
 });
 
 // construct header view
-var headerView = Ti.UI.createView();
+var headerView = Ti.UI.createView({
+	height: '50dp',
+	width: '100%',
+	backgroundColor: '#efefef',
+	layout: 'horizontal',
+	top: 0
+});
+
+// construct textfield
+var txtTaskName = Ti.UI.createTextField();
