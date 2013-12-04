@@ -23,7 +23,7 @@ var win = Ti.UI.createWindow({
 var headerView = Ti.UI.createView({
 	height: '50dp',
 	width: '100%',
-	backgroundColor: '#efefef',
+	backgroundColor: '#ffffff',
 	layout: 'horizontal',
 	top: '40dp'
 });
@@ -41,8 +41,8 @@ var txtTaskName = Ti.UI.createTextField({
 var btnAdd = Ti.UI.createButton({
 	backgroundImage: 'images/746-plus-circle.png',
 	left: 15,
-	height: '45dp',
-	width: '45dp'
+	height: '25dp',
+	width: '25dp'
 });
 
 // add textfield and button to header
