@@ -59,6 +59,11 @@ var taskView = Ti.UI.createView({
 	backgroundColor: '#ffffff'
 });
 
+// construct table view - list of tasks
+var taskList = Ti.UI.createTableView();
+
+
+
 // add task view to main window
 win.add(taskView);
 
