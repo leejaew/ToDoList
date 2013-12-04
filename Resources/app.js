@@ -29,4 +29,10 @@ var headerView = Ti.UI.createView({
 });
 
 // construct textfield
-var txtTaskName = Ti.UI.createTextField();
+var txtTaskName = Ti.UI.createTextField({
+	left: 15,
+	width: '75%',
+	hintText: 'Enter a new task',
+	backgroundColor: '#ffffff',
+	borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED
+});
