@@ -81,7 +81,8 @@ var buttonBar = Ti.UI.createView({
 	bottom: 0
 });
 
-
+// add button bar to the main window
+win.add(buttonBar);
 
 // open main window
 win.open();
