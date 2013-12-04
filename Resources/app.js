@@ -126,3 +126,25 @@ win.open();
 function addTask(name) {
 	db.execute('INSERT INTO TODO_ITEMS (NAME, IS_COMPLETE) VALUES (?, 0)', name);
 }
+
+// list all records from local database 
+function refreshTaskList() {
+	var rows = db.execute('SELECT * FROM TODO_ITEMS');
+	var data = [];
+
+	while (rows.isValidRow()) {
+		var isComplete = rows.fieldByName('IS_COMPLETE');
+
+		data.push({
+			title: '' + rows.fieldByName('NAME') + '',
+			hasCheck: (isComplete===1) ? true : false,
+			id: rows.fieldByName('ID'),
+			color: '#153450',
+			className: 'task'
+		});
+
+		rows.next();
+	};
+
+	taskList.setData(data);
+}
