@@ -78,6 +78,15 @@ var taskList = Ti.UI.createTableView({
 	separatorColor: '#447294'
 });
 
+// listen for 'click' event when user clicks a tableview row 
+taskList.addEventListener('click', function(e) {
+	var todoItem = e.rowData;
+	var isComplete = (todoItem.hasCheck ? 0 : 1);
+
+	db.execute('UPDATE TODO_ITEMS SET IS_COMPLETE = ? WHERE ID = ?', isComplete, todoItem.id);
+	refreshTaskList();
+});
+
 // add table view to task view (adding tableview to the main taskview)
 taskView.add(taskList);
 
