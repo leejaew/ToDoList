@@ -73,6 +73,9 @@ taskView.add(taskList);
 // add task view to main window
 win.add(taskView);
 
+// construct button bar view
+var buttonBar = Ti.UI.createView();
+
 
 
 // open main window
