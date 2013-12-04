@@ -112,6 +112,10 @@ if (!Ti.Android) {
 		style: Titanium.UI.iPhone.SystemButtonStyle.BAR,
 		index: 0,
 	});
+
+	basicSwitch.addEventListener('click', function(e) {
+		toggleAllTasks(e.index === 0);
+	});
 } else {	
 	// construct switch button for Android
 	basicSwitch = Ti.UI.createSwitch({
@@ -119,6 +123,10 @@ if (!Ti.Android) {
 		left: 5,
 		titleOn: 'Open',
 		titleOff: 'Completed'
+	});
+	
+	basicSwitch.addEventListener('change', function(e) {
+		toggleAllTasks(e.value === true);
 	});
 }
 
