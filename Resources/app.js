@@ -74,7 +74,12 @@ taskView.add(taskList);
 win.add(taskView);
 
 // construct button bar view
-var buttonBar = Ti.UI.createView();
+var buttonBar = Ti.UI.createView({
+	height: '50dp',
+	width: '100%',
+	backgroundColor: '#447294',
+	bottom: 0
+});
 
 
 
