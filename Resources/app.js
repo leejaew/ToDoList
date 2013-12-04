@@ -45,3 +45,7 @@ var btnAdd = Ti.UI.createButton({
 	width: '45dp'
 });
 
+// add textfield and button to header
+headerView.add(txtTaskName);
+headerView.add(btnAdd);
+
