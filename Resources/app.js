@@ -81,6 +81,7 @@ var buttonBar = Ti.UI.createView({
 	bottom: 0
 });
 
+/*
 // construct tabbed bar element for iOS
 var	basicSwitch = Ti.UI.iOS.createTabbedBar({
 	labels: ['Open', 'Completed'],
@@ -89,6 +90,17 @@ var	basicSwitch = Ti.UI.iOS.createTabbedBar({
 	style: Titanium.UI.iPhone.SystemButtonStyle.BAR,
 	index: 0,
 });
+*/
+
+// construct switch button for Android
+var basicSwitch = Ti.UI.createSwitch({
+	value: true,
+	left: 5,
+	titleOn: 'Open',
+	titleOff: 'Completed'
+});
+
+// add switch button object to buttonbar view
 buttonBar.add(basicSwitch);
 
 // add button bar to the main window
