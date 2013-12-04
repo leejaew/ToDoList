@@ -19,3 +19,5 @@ var win = Ti.UI.createWindow({
 	title: 'To-do List'
 });
 
+// construct header view
+var headerView = Ti.UI.createView();
